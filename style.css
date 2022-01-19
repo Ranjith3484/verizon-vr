@@ -1,0 +1,353 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background:black;
+  color:#485e74;
+  line-height:1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:1em;
+}
+
+h1{
+  margin:2px !important;
+  font-size: 36px !important;
+  text-align: justify;
+  font-weight: 600;
+}
+
+h4{
+  margin:2px !important;
+  font-size: 22px !important;
+  font-weight: 500;
+  text-align: justify;
+}
+
+p{
+  margin: 2px !important;
+  color: white;
+  text-align: justify;
+}
+
+.white{
+  color:white;
+}
+
+.addSpace{
+  height: 20px !important;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* form */
+
+.logoImage{
+  width: 150px;
+  height:50px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding:50px 150px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ align-content: center;
+}
+
+input{
+  background-color: transparent;
+   color: #eeeeee;
+   outline: none;
+   outline-style: none;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 2px solid white;
+   padding: 3px 10px;
+   margin-top: 50px;
+   width: 500px;
+   font-size: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+.submitButton{
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 100px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-family: verizonBoldFont;
+}
+.submitButton:hover{
+  background-color: black;
+  border:2px solid white;
+  color:white;
+}
+
+/* loader */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 40%;
+  left: 49%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+/* snack bar */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top:20px;
+  height: 40px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 20px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 3\20px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 20px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 20px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+/* success popup*/
+#successPopup {
+  visibility: hidden;
+  position: fixed;
+  width: 70%;
+  height: 70%;
+  top: 6%;
+  left: 15%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+ #successPopup.show {
+  visibility: visible;
+  -webkit-animation: zoom-in-zoom-out 0.8s;
+  animation: zoom-in-zoom-out 0.8s;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+  transform: scale(0, 0);
+  }
+  100% {
+  transform: scale(1, 1);
+  }
+}
+
+.vrDeviceText{
+ color:white;
+ text-align: center;
+ margin-top: 10% !important;
+} 
+
+.deviceContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 5%;
+}
+
+.vrDevice{
+   height: 40%;
+   width:40%;
+   margin-bottom: 10%;
+   margin-left: 2%;
+   margin-right: 2%;
+}
+
+.vrDeviceHand{
+   height: 20%;
+   width: 20%;
+}
+
+@media only screen and (max-width: 850px) {
+
+  h1{
+    margin:0px !important;
+    font-size: 23px !important;
+    text-align: justify;
+  }
+  
+  h4{
+    margin:0px !important;
+    font-size: 18px !important;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 10px !important;
+  }
+  
+  p{
+    margin: 0px !important;
+    color: white;
+    text-align: justify;
+    font-size: 15px !important;
+  }
+
+  .logoImage{
+    width: 150px;
+    height:50px;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding:0px 0px;
+    background-color: black;
+}
+input {
+    background-color: transparent;
+     color: #eeeeee;
+     outline: none;
+     outline-style: none;
+     border-top: none;
+     border-left: none;
+     border-right: none;
+     border-bottom: 2px solid white;
+     padding: 3px 10px;
+     margin-top: 30px;
+     width: 350px;
+     font-size: 20px;
+ }
+
+ .submitButton{
+    height: 40px;
+    width: 30%;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 100px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-family: verizonBoldFont;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#successPopup {
+  visibility: hidden;
+  position: fixed;
+  width: 90%;
+  height: 60%;
+  top: 20%;
+  left: 5%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.deviceContainer{
+   margin-top: 20%;
+}
+}
